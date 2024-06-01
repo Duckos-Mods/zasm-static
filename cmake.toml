@@ -2,7 +2,9 @@
 [project]
 name = "zasm"
 languages = ["CXX"]
-msvc-runtime = "dynamic"
+cmake-before = """
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
+"""
 
 [options]
 ZASM_BUILD_TESTS = false
